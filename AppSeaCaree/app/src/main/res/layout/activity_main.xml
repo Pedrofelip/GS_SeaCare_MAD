@@ -8,35 +8,57 @@
     tools:context=".MainActivity">
 
     <!-- Banner com imagem no topo -->
+
+    <!-- Texto abaixo do banner -->
     <ImageView
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/blackblue"
+        android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:adjustViewBounds="true"/>
+        android:src="@drawable/blackblue" />
 
-    <!-- Texto abaixo do banner -->
     <TextView
         android:id="@+id/texto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="A Sea Care é uma plataforma online para denúncias de poluição marinha, visando conscientizar e mobilizar ações. Permite que usuários cadastrem-se com nome e telefone para registrar denúncias de poluição em praias e ambientes marinhos. Oferece um ranking dos locais mais poluídos e espaço para notícias e ações."
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:layout_below="@id/banner"
         android:layout_centerHorizontal="true"
-        android:padding="16dp"/>
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        />
 
-    <!-- Botão que leva para outra tela -->
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver as denúncias"
-        android:background="@color/azul"
+        android:orientation="horizontal"
         android:layout_below="@id/texto"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"/>
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_grupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/azul"
+            android:text="Integrantes" />/>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/azul"
+            android:text="Ver as denúncias" />
+    </LinearLayout>
+
 
 </RelativeLayout>
